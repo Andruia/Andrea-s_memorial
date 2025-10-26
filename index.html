@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Andrea | 1990–2018</title>
+  <meta name="description" content="Memorial digital en honor a Andrea (1990–2018). Video tributo, galería de fotos y libro de visitas." />
+  <link rel="preload" href="assets/video/homenaje.mp4" as="video" type="video/mp4">
+  <style>
+    :root{
+      --bg:#0e0f12;--fg:#e9eef3;--muted:#b7c0c9;--accent:#7dc6ff;--card:#16181d;--soft:#242833;
+      --maxw:980px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+    a{color:var(--accent);text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:auto;padding:20px}
+    header{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:24px 0}
+    h1{font-size:72px;line-height:0.95;margin:0;letter-spacing:1px}
+    .dates{font-weight:800;font-size:22px;color:var(--muted)}
+    .desc{max-width:800px;color:#d6dde5;font-size:18px;line-height:1.6}
+    nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+    .btn{background:var(--soft);color:var(--fg);border:1px solid #2b3040;padding:10px 14px;border-radius:10px;font-weight:600}
+    .btn:hover{background:#2a3042}
+    section{background:var(--card);border:1px solid #242a37;border-radius:16px;margin:18px 0;padding:16px}
+    .section-title{margin:8px 0 14px 0;font-size:26px}
+    /* VIDEO */
+    .video-card{padding:10px}
+    video{width:100%;height:auto;border-radius:12px;display:block;background:#000}
+    .video-note{color:var(--muted);font-size:14px;margin-top:8px}
+    /* GALERÍA */
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .ph{position:relative;background:#0a0b0e;border:1px solid #272c3b;border-radius:12px;overflow:hidden}
+    .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease}
+    .ph:hover img{transform:scale(1.02)}
+    .cap{position:absolute;left:8px;bottom:8px;background:#0009;color:#fff;padding:6px 8px;border-radius:8px;font-size:12px}
+    /* GUESTBOOK */
+    form{display:grid;gap:10px}
+    input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #2b3040;background:#0f1218;color:var(--fg);font-size:16px}
+    textarea{min-height:120px;resize:vertical}
+    .cta{margin-top:8px;display:flex;justify-content:center}
+    .cta a{display:inline-block;background:#1aa65b;border:1px solid #12834a;color:#fff;padding:12px 16px;border-radius:12px;font-weight:700}
+    .cta a:hover{filter:brightness(1.05)}
+    footer{color:var(--muted);font-size:13px;text-align:center;padding:18px 0}
+    /* RESPONSIVE */
+    @media (max-width:740px){
+      .wrap{padding:14px}
+      h1{font-size:56px}
+      .dates{font-size:19px}
+      .desc{font-size:16px}
+      .grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:480px){
+      h1{font-size:48px}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Andrea</h1>
+      <div class="dates">11 de septiembre de 1990 — 29 de marzo de 2018</div>
+      <p class="desc">
+        Esta página es un pequeño jardín de recuerdos para honrar la vida de Andrea. Aquí puedes ver su video tributo,
+        recorrer algunos momentos en fotos y dejar unas palabras en el libro de visitas.
+      </p>
+      <nav>
+        <a class="btn" href="#video">Ver video</a>
+        <a class="btn" href="#galeria">Galería</a>
+        <a class="btn" href="#mensaje">Dejar mensaje</a>
+      </nav>
+    </header>
+
+    <section id="video" class="video-card">
+      <h2 class="section-title">Video tributo</h2>
+      <video controls preload="metadata" poster="assets/images/foto_2.jpg">
+        <source src="assets/video/homenaje.mp4" type="video/mp4" />
+        Tu navegador no soporta video HTML5.
+      </video>
+      <div class="video-note">Si estás en datos móviles, espera unos segundos mientras se carga.</div>
+    </section>
+
+    <section id="galeria">
+      <h2 class="section-title">Galería de recuerdos</h2>
+      <div class="grid">
+        <figure class="ph">
+          <img src="assets/images/foto_1_corregida.jpg" alt="Andrea en su infancia" loading="lazy">
+          <figcaption class="cap">Infancia</figcaption>
+        </figure>
+        <figure class="ph">
+          <img src="assets/images/foto_2.jpg" alt="Andrea en su graduación" loading="lazy">
+          <figcaption class="cap">Graduación</figcaption>
+        </figure>
+        <figure class="ph">
+          <img src="assets/images/foto_3.jpg" alt="Andrea con su pequeño" loading="lazy">
+          <figcaption class="cap">Amor</figcaption>
+        </figure>
+        <figure class="ph">
+          <img src="assets/images/foto_4.jpg" alt="Andrea en viaje familiar" loading="lazy">
+          <figcaption class="cap">Familia</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="mensaje">
+      <h2 class="section-title">Libro de visitas</h2>
+      <form action="https://formspree.io/f/your_form_id" method="POST">
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo (opcional)">
+        <textarea name="message" placeholder="Escribe tu mensaje para Andrea..." required></textarea>
+        <button class="btn" type="submit">Enviar mensaje</button>
+      </form>
+      <div class="cta">
+        <a href="https://wa.me/593XXXXXXXXX" target="_blank" rel="noopener">Contactar por WhatsApp</a>
+      </div>
+    </section>
+
+    <footer>
+      Con amor, en memoria de Andrea. © 2025
+    </footer>
+  </div>
+</body>
+</html>
