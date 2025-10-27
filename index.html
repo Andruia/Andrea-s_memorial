@@ -182,11 +182,26 @@
 
     <section id="mensaje">
       <h2 class="section-title">Libro de visitas</h2>
-      <form action="https://formspree.io/f/your_form_id" method="POST">
+      <form action="https://formspree.io/f/mldodkbv" method="POST">
+        <input type="hidden" name="_subject" value="Nuevo mensaje en el memorial de Andrea">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        
         <input type="text" name="name" placeholder="Tu nombre" required>
         <input type="email" name="email" placeholder="Tu correo (opcional)">
         <textarea name="message" placeholder="Escribe tu mensaje para Andrea..." required></textarea>
         <button class="btn-submit" type="submit">✉️ Enviar mensaje</button>
+
+        <div id="gracias" style="display:none;margin-top:12px;background:#0f131d;border:1px solid #2b3040;border-radius:12px;padding:14px;color:#b9c5d3">
+          ¡Gracias por tu mensaje! Ha sido enviado con éxito y será leído con mucho cariño.
+        </div>
+        <script>
+          // Mostrar “gracias” si la URL contiene el ancla #gracias
+          if (location.hash === '#gracias') {
+            var g = document.getElementById('gracias');
+            if (g) g.style.display = 'block';
+          }
+        </script>
       </form>
       <div class="cta">
         <div class="cta-card">
